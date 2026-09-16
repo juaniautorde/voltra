@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Voltra: cajas de barritas energéticas para elegir, comprar online o abastecer tu comercio." />
+  <meta property="og:title" content="Voltra | Cajas de barritas energéticas" />
+  <meta property="og:description" content="Elegí cajas individuales o mixtas de barritas Voltra." />
+  <meta property="og:type" content="website" />
+  <title>Voltra | Barritas energéticas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="brand" aria-label="Voltra home">
+        <span class="brand-mark">V</span>
+        <span>Voltra</span>
+      </a>
+      <div class="nav-links" id="main-menu">
+        <a href="#producto">Productos</a>
+        <a href="#producto-energia">Energía</a>
+        <a href="#producto-recuperacion">Recuperación</a>
+        <a href="#producto-muscular">Muscular</a>
+        <a href="#producto-saludable">Gusto saludable</a>
+        <a href="#comparador">Comparar</a>
+        <a href="#mayorista">Mayorista</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#faq">FAQ</a>
+        <button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrito" aria-controls="cart-modal">
+          <span aria-hidden="true">🛒</span>
+          <span>Carrito</span>
+          <b id="cart-count">0</b>
+        </button>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="product-nav" aria-label="Línea de barritas">
+      <div class="container product-nav-inner">
+        <span class="product-nav-label">Elegí tu barrita</span>
+        <a href="#producto-energia"><span class="product-nav-swatch green"></span>Energía</a>
+        <a href="#producto-recuperacion"><span class="product-nav-swatch blue"></span>Recuperación</a>
+        <a href="#producto-muscular"><span class="product-nav-swatch red"></span>Recuperación muscular</a>
+        <a href="#producto-saludable"><span class="product-nav-swatch purple"></span>Gusto saludable</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Energia sin culpa</p>
+        <h1>Voltra</h1>
+        <p class="lead">Barritas reales para rendir antes, durante y después del entrenamiento. Sin sabores artificiales, con proteína, ingredientes honestos y sabor que de verdad invita a repetir.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#producto">Elegir barritas</a>
+          <a class="button button-secondary" href="#producto">Ver barritas</a>
+        </div>
+        <div class="hero-meta">
+          <p>Compra minorista y mayorista desde un solo lugar.</p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Voltra packaging de energías">
+        <div class="hero-packshot">
+          <img src="images/todasbarritas.png" alt="Colección completa de barritas Voltra" />
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits section" id="beneficios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Diseñado para rendir</p>
+          <h2>Barritas pensadas para moverse.</h2>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit reveal">
+            <div class="benefit-icon">⚡</div>
+            <h3>Energía rápida</h3>
+            <p>Carbohidratos reales para arrancar con potencia antes del entrenamiento.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">🍌</div>
+            <h3>Ingredientes reales</h3>
+            <p>Fruta, cereal y proteína sin sabores artificiales ni rellenos.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">💪</div>
+            <h3>Recuperación</h3>
+            <p>Proteína y electrolitos para volver a mover el cuerpo con más fuerza.</p>
+          </article>
+          <article class="benefit reveal">
+            <div class="benefit-icon">📦</div>
+            <h3>Listas para llevar</h3>
+            <p>Portables, prácticas y perfectas para mochila, bolso o bolsillo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog section" id="producto">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Voltra range</p>
+          <h2>Elegí tu momento.</h2>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-item product-card reveal green" id="producto-energia" data-product="energia" tabindex="0">
+            <div class="product-cards">
+              <img class="front-view" src="images/adelanteverde.png" alt="Voltra Energía frontal" />
+              <img class="back-view" src="images/atrasverde.png" alt="Voltra Energía posterior" />
+            </div>
+            <div class="item-copy">
+              <h3>Voltra Energía</h3>
+              <p>Caja de 12 barritas de banana, miel y cereales crocantes.</p>
+              <div class="item-row">
+                <button class="text-link product-link" type="button" data-product="energia">Ver detalle</button>
+                <div class="box-options">
+                  <button class="box-option add-to-cart" type="button" data-product="energia" data-box-size="4">Caja x4 <strong>$11.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="energia" data-box-size="8">Pack x8 <strong>$20.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="energia" data-box-size="12">Pack x12 <strong>$28.000</strong></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-item product-card reveal blue" id="producto-recuperacion" data-product="recuperacion" tabindex="0">
+            <div class="product-cards">
+              <img class="front-view" src="images/adelanteceleste.png" alt="Voltra Recuperación frontal" />
+              <img class="back-view" src="images/atrasceleste.png" alt="Voltra Recuperación posterior" />
+            </div>
+            <div class="item-copy">
+              <h3>Voltra Recuperación</h3>
+              <p>Caja de 12 barritas de caramelo salado, vainilla y electrolitos.</p>
+              <div class="item-row">
+                <button class="text-link product-link" type="button" data-product="recuperacion">Ver detalle</button>
+                <div class="box-options">
+                  <button class="box-option add-to-cart" type="button" data-product="recuperacion" data-box-size="4">Caja x4 <strong>$11.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="recuperacion" data-box-size="8">Pack x8 <strong>$20.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="recuperacion" data-box-size="12">Pack x12 <strong>$28.000</strong></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-item product-card reveal red" id="producto-muscular" data-product="muscular" tabindex="0">
+            <div class="product-cards">
+              <img class="front-view" src="images/adelanteroja.png" alt="Voltra Recuperación muscular frontal" />
+              <img class="back-view" src="images/atrasroja.png" alt="Voltra Recuperación muscular posterior" />
+            </div>
+            <div class="item-copy">
+              <h3>Voltra Recuperación muscular</h3>
+              <p>Caja de 12 barritas de maní, almendras y proteína.</p>
+              <div class="item-row">
+                <button class="text-link product-link" type="button" data-product="muscular">Ver detalle</button>
+                <div class="box-options">
+                  <button class="box-option add-to-cart" type="button" data-product="muscular" data-box-size="4">Caja x4 <strong>$11.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="muscular" data-box-size="8">Pack x8 <strong>$20.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="muscular" data-box-size="12">Pack x12 <strong>$28.000</strong></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="catalog-item product-card reveal purple" id="producto-saludable" data-product="saludable" tabindex="0">
+            <div class="product-cards">
+              <img class="front-view" src="images/adelantevioleta.png" alt="Voltra Gusto saludable frontal" />
+              <img class="back-view" src="images/atrasvioleta.png" alt="Voltra Gusto saludable posterior" />
+            </div>
+            <div class="item-copy">
+              <h3>Voltra Gusto saludable</h3>
+              <p>Caja de 12 barritas de cacao, dátiles y avellanas.</p>
+              <div class="item-row">
+                <button class="text-link product-link" type="button" data-product="saludable">Ver detalle</button>
+                <div class="box-options">
+                  <button class="box-option add-to-cart" type="button" data-product="saludable" data-box-size="4">Caja x4 <strong>$11.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="saludable" data-box-size="8">Pack x8 <strong>$20.000</strong></button>
+                  <button class="box-option add-to-cart" type="button" data-product="saludable" data-box-size="12">Pack x12 <strong>$28.000</strong></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="catalog-item mixed-box reveal">
+          <div class="mixed-box-art" aria-hidden="true">
+            <img src="images/adelanteverde.png" alt="" />
+            <img src="images/adelanteceleste.png" alt="" />
+            <img src="images/adelanteroja.png" alt="" />
+            <img src="images/adelantevioleta.png" alt="" />
+          </div>
+          <div class="item-copy">
+            <p class="eyebrow">Para probar toda la línea</p>
+            <h3>Caja mixta x4 Voltra</h3>
+            <p>4 barritas surtidas: 1 de cada gusto.</p>
+            <div class="item-row">
+              <span>$11.000 / caja</span>
+              <button class="text-link add-to-cart" type="button" data-product="mixta4" data-box-size="4">Agregar al carrito</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="catalog-item mixed-box reveal">
+          <div class="mixed-box-art" aria-hidden="true">
+            <img src="images/adelanteverde.png" alt="" />
+            <img src="images/adelanteceleste.png" alt="" />
+            <img src="images/adelanteroja.png" alt="" />
+            <img src="images/adelantevioleta.png" alt="" />
+          </div>
+          <div class="item-copy">
+            <p class="eyebrow">La más elegida</p>
+            <h3>Caja mixta x12 Voltra</h3>
+            <p>12 barritas surtidas: 3 de cada gusto.</p>
+            <div class="item-row">
+              <span>$28.000 / pack</span>
+              <button class="text-link add-to-cart" type="button" data-product="mixta" data-box-size="12">Agregar al carrito</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparison section" id="comparador">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Elegí según tu momento</p>
+          <h2>Compará tu VOLTRA.</h2>
+        </div>
+        <div class="comparison-table-wrap reveal">
+          <table class="comparison-table">
+            <thead><tr><th>Producto</th><th>Momento</th><th>Ingredientes destacados</th><th>Formato</th><th>Precio</th></tr></thead>
+            <tbody>
+              <tr><th>Voltra Energía</th><td>Preentrenamiento</td><td>Banana, miel y cereales</td><td>Pack x4 / x8 / x12</td><td>$11.000 / $20.000 / $28.000</td></tr>
+              <tr><th>Voltra Recuperación</th><td>Después de entrenar</td><td>Caramelo salado, vainilla y electrolitos</td><td>Pack x4 / x8 / x12</td><td>$11.000 / $20.000 / $28.000</td></tr>
+              <tr><th>Voltra Recuperación muscular</th><td>Después de un entrenamiento intenso</td><td>Maní, almendras y proteína</td><td>Pack x4 / x8 / x12</td><td>$11.000 / $20.000 / $28.000</td></tr>
+              <tr><th>Voltra Gusto saludable</th><td>Snack / antojo</td><td>Cacao, dátiles y avellanas</td><td>Pack x4 / x8 / x12</td><td>$11.000 / $20.000 / $28.000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-detail section" id="detalle-producto">
+      <div class="container detail-panel reveal">
+        <div class="detail-visual">
+          <div class="detail-product-stack">
+            <img id="detail-front" class="detail-front" src="images/adelanteverde.png" alt="Voltra Energía frontal" />
+            <img id="detail-back" class="detail-back" src="images/atrasverde.png" alt="Voltra Energía trasero" />
+          </div>
+        </div>
+
+        <div class="detail-copy">
+          <p id="detail-tag" class="eyebrow">Energía – Preentrenamiento</p>
+          <h2 id="detail-title">Banana, miel y cereales crocantes se combinan para aportar carbohidratos y energía antes de entrenar.</h2>
+          <p id="detail-description">Ideal para correr, entrenar o moverte con más fuerza. La mezcla de fruta real y cereal crocante ofrece un sabor más natural y una energía que se siente desde el primer minuto.</p>
+          <ul id="detail-features">
+            <li>Carbohidratos reales</li>
+            <li>Sin azúcar añadida</li>
+            <li>Proteína y fibra</li>
+          </ul>
+          <img id="detail-graphic" class="info-graphic" src="images/info_barritaverde.png" alt="Información de Voltra Energía" />
+          <div class="product-facts">
+            <span><strong>Contenido</strong> Caja según formato elegido</span>
+            <span><strong>Disponibilidad</strong> Stock pendiente de conectar</span>
+            <span><strong>Alérgenos</strong> Información pendiente de confirmar</span>
+            <span><strong>Nutrición</strong> Información pendiente de cargar</span>
+          </div>
+          <div class="detail-actions">
+            <button class="button button-primary add-to-cart" type="button" data-product="energia">Agregar esta caja</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container chat-panel reveal">
+        <div class="chat-header">
+          <div>
+            <p class="eyebrow">Asistente Voltra</p>
+            <h3 id="chat-product-label">Voltra Energía</h3>
+          </div>
+        </div>
+
+        <div class="chat-window" id="chat-window" aria-live="polite">
+          <div class="message bot">Hola, soy Voltra Assistant. ¿Querés saber si esta barrita sirve antes de entrenar, qué sabor tiene o qué ingredientes lleva?</div>
+        </div>
+
+        <form class="chat-form" id="chat-form">
+          <input id="chat-input" type="text" placeholder="Pregunta por Voltra Energía..." aria-label="Pregunta sobre la barrita seleccionada" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="wholesale section" id="mayorista">
+      <div class="container wholesale-grid">
+        <div class="reveal">
+          <p class="eyebrow">Para comercios</p>
+          <h2>¿Tenés un comercio?</h2>
+          <p>Trabajamos con pedidos mayoristas desde $200.000. Dejanos tus datos y te contactamos para conocer tu necesidad.</p>
+          <strong>Compra mayorista desde $200.000.</strong>
+        </div>
+        <form class="wholesale-form reveal" id="wholesale-form">
+          <div class="form-grid">
+            <label>Nombre<input name="wholesale-first-name" required minlength="2" placeholder="Nombre" /></label>
+            <label>Apellido<input name="wholesale-last-name" required minlength="2" placeholder="Apellido" /></label>
+            <label>Email<input type="email" name="wholesale-email" required placeholder="correo@email.com" /></label>
+            <label>Teléfono / WhatsApp<input type="tel" name="wholesale-phone" required placeholder="11 5555 5555" /></label>
+            <label>Comercio<input name="wholesale-business" required placeholder="Nombre del comercio" /></label>
+            <label>Tipo de comercio<input name="wholesale-business-type" placeholder="Dietética, gimnasio, etc." /></label>
+            <label>Ciudad<input name="wholesale-city" placeholder="Ciudad" /></label>
+            <label>Provincia<input name="wholesale-province" placeholder="Provincia" /></label>
+            <label>CUIT<input name="wholesale-cuit" inputmode="numeric" maxlength="11" pattern="[0-9]{11}" placeholder="11 dígitos" /></label>
+            <label>Cantidad estimada<input name="wholesale-quantity" type="number" min="1" placeholder="Cajas por pedido" /></label>
+          </div>
+          <label>Productos de interés<textarea name="wholesale-products" rows="3" placeholder="Qué cajas te interesan"></textarea></label>
+          <label>Mensaje<textarea name="wholesale-message" rows="3" placeholder="Contanos sobre tu comercio"></textarea></label>
+          <button class="button button-primary" type="submit">Quiero comprar mayorista</button>
+          <p class="form-message" id="wholesale-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Todo lo que necesitás saber.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <details open>
+            <summary>¿Cuándo conviene comerla? <span>+</span></summary>
+            <p>30–45 minutos antes de entrenar para tener energía disponible y evitar pesadez.</p>
+          </details>
+          <details>
+            <summary>¿Sirve para después de entrenar? <span>+</span></summary>
+            <p>Sí. La línea Recuperación está pensada para volver a energizarte y ayudar a la recuperación.</p>
+          </details>
+          <details>
+            <summary>¿Tiene gluten o azúcar añadida? <span>+</span></summary>
+            <p>No, están pensadas para una opción más limpia y real, sin sabores artificiales ni exceso de azúcar.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa con el pago? <span>+</span></summary>
+            <p>Podés pagar con Mercado Pago cuando se conecte la pasarela, por transferencia bancaria o efectivo si corresponde. No ingresamos datos de tarjeta en VOLTRA.</p>
+          </details>
+          <details>
+            <summary>¿Cómo compro para mi comercio? <span>+</span></summary>
+            <p>Elegí compra mayorista al ingresar. El pedido mínimo mayorista es de $200.000 y se solicitan los datos fiscales del comercio.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se calcula el envío? <span>+</span></summary>
+            <p>El costo se calculará según código postal y zona cuando se configuren las tarifas de envío.</p>
+          </details>
+          <details>
+            <summary>¿Puedo retirar mi pedido? <span>+</span></summary>
+            <p>La opción de retiro queda preparada para configurarse cuando se defina el punto de entrega.</p>
+          </details>
+          <details>
+            <summary>¿Cómo contacto a VOLTRA? <span>+</span></summary>
+            <p>Podés escribir a voltra.ecom@gmail.com o usar el botón de WhatsApp cuando se configure el número oficial.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="buy section container" id="comprar">
+      <div class="buy-box reveal">
+        <div>
+          <p class="eyebrow">Voltra</p>
+          <h2>Energía real para cada momento.</h2>
+        </div>
+        <div class="buy-actions">
+          <strong>Tu selección</strong>
+          <button class="button button-primary" id="cart-section-button" type="button">Ver carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand brand-footer"><span class="brand-mark">V</span><span>Voltra</span></a>
+      </div>
+      <div class="footer-links">
+        <a href="#producto">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.instagram.com/voltra.go/" target="_blank" rel="noreferrer">Instagram @voltra.go</a>
+        <a href="mailto:voltra.ecom@gmail.com">voltra.ecom@gmail.com</a>
+        <a href="#legales">Términos y políticas</a>
+      </div>
+      <div class="footer-note">VOLTRA · Datos legales y condiciones pendientes de completar.</div>
+    </div>
+  </footer>
+
+  <section class="trust section" id="legales">
+    <div class="container trust-grid">
+      <div><p class="eyebrow">Información</p><h2>Una compra clara, de principio a fin.</h2></div>
+      <div class="trust-links">
+        <details><summary>Términos y condiciones</summary><p>Los precios están expresados en pesos argentinos y pueden actualizarse según costos de insumos. El pedido queda confirmado cuando VOLTRA valida los datos y el pago elegido. Las fotos son ilustrativas y la disponibilidad depende del stock.</p></details>
+        <details><summary>Política de privacidad</summary><p>Usamos los datos enviados en los formularios únicamente para gestionar pedidos, consultas y compras mayoristas. No almacenamos datos de tarjetas en este sitio. Para solicitar acceso, rectificación o eliminación, escribinos a voltra.ecom@gmail.com.</p></details>
+        <details><summary>Cambios y devoluciones</summary><p>Por tratarse de alimentos, no aceptamos devoluciones de productos abiertos o manipulados. Si recibís una caja dañada, equivocada o con un problema de calidad, escribinos a voltra.ecom@gmail.com dentro de las 48 horas de la entrega con el número de pedido y fotos. Evaluaremos el cambio o reintegro correspondiente.</p></details>
+        <details><summary>Envíos y retiro</summary><p>El envío se cobra aparte y se calcula según la zona, con $1.800 como referencia AMBA. Los packs x8 y x12 pueden acceder a envío bonificado desde el mínimo vigente. También podés retirar sin cargo en un punto habilitado cuando esté disponible. Los plazos y la cobertura se confirman al coordinar el pedido.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="customer-modal" id="customer-modal" aria-labelledby="customer-title">
+    <div class="customer-modal-inner">
+      <p class="eyebrow">Bienvenido a Voltra</p>
+      <h2 id="customer-title">¿Cómo querés comprar?</h2>
+      <p class="customer-intro">Elegí el tipo de compra para mostrarte el recorrido correcto.</p>
+      <div class="customer-options">
+        <button class="customer-option" type="button" data-segment="retail">
+          <strong>Compra minorista</strong>
+          <span>Para consumo personal, sin mínimo de compra.</span>
+        </button>
+        <button class="customer-option" type="button" data-segment="wholesale">
+          <strong>Compra mayorista</strong>
+          <span>Para comercios y pedidos desde $200.000.</span>
+        </button>
+      </div>
+      <div class="wholesale-access" id="wholesale-access" hidden>
+        <label>
+          CUIT
+          <input id="entry-cuit" type="text" inputmode="numeric" maxlength="11" placeholder="20123456789" pattern="[0-9]{11}" required />
+        </label>
+        <p>La compra mayorista tiene un mínimo de $200.000.</p>
+        <button class="button button-primary" id="enter-wholesale" type="button">Ingresar como mayorista</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="cart-modal" id="cart-modal" aria-labelledby="cart-title">
+    <div class="checkout-head">
+      <div>
+        <p class="eyebrow">Tu selección</p>
+        <h2 id="cart-title">Carrito</h2>
+      </div>
+      <button class="close-modal cart-close" type="button" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-summary">
+      <span>Subtotal</span><strong id="cart-subtotal">$0</strong>
+      <span>Envío</span><strong id="cart-shipping">A calcular</strong>
+      <span>Total</span><strong id="cart-total">$0</strong>
+    </div>
+    <p class="customer-type" id="customer-type">Compra minorista</p>
+    <p class="wholesale-note" id="wholesale-note">Superando $200.000, tu pedido se identifica como mayorista.</p>
+    <button class="button button-primary checkout-start" id="checkout-start" type="button">Continuar con la compra</button>
+    <button class="continue-shopping" id="continue-shopping" type="button">Continuar comprando</button>
+    <button class="clear-cart" id="clear-cart" type="button">Vaciar carrito</button>
+    <p class="cart-empty" id="cart-empty">Todavía no agregaste ninguna barrita.</p>
+  </dialog>
+
+  <dialog class="checkout-modal" id="checkout-modal" aria-labelledby="checkout-title">
+    <div class="checkout-head">
+      <div>
+        <p class="eyebrow">Checkout</p>
+        <h2 id="checkout-title">Completá tu pedido</h2>
+      </div>
+      <button class="close-modal" type="button" aria-label="Cerrar checkout">×</button>
+    </div>
+
+    <div class="order-summary" id="checkout-summary"></div>
+
+    <form class="checkout-form" id="checkout-form">
+      <div class="form-grid">
+        <label>
+          Nombre
+          <input type="text" name="first-name" autocomplete="given-name" required minlength="2" placeholder="Tu nombre" />
+        </label>
+        <label>
+          Apellido
+          <input type="text" name="last-name" autocomplete="family-name" required minlength="2" placeholder="Tu apellido" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required placeholder="correo@email.com" />
+        </label>
+        <label>
+          Teléfono
+          <input type="tel" name="phone" autocomplete="tel" required pattern="[0-9 +()-]{8,}" placeholder="11 5555 5555" />
+        </label>
+        <label>
+          Provincia
+          <select name="province" required>
+            <option value="">Seleccioná una opción</option>
+            <option>Buenos Aires</option>
+            <option>CABA</option>
+            <option>Córdoba</option>
+            <option>Santa Fe</option>
+            <option>Mendoza</option>
+            <option>Neuquén</option>
+            <option>Otra provincia</option>
+          </select>
+        </label>
+        <label>
+          Localidad
+          <input type="text" name="locality" autocomplete="address-level2" required placeholder="Tu localidad" />
+        </label>
+      </div>
+
+      <div class="business-fields" id="business-fields" hidden>
+        <p class="business-label">Datos para compra mayorista</p>
+        <div class="form-grid">
+          <label>
+            Razón social
+            <input type="text" name="business-name" autocomplete="organization" placeholder="Nombre de la empresa" />
+          </label>
+          <label>
+            CUIT
+            <input type="text" name="cuit" inputmode="numeric" maxlength="11" placeholder="20123456789" pattern="[0-9]{11}" />
+          </label>
+        </div>
+      </div>
+
+      <label>
+        Calle
+        <input type="text" name="street" autocomplete="address-line1" required minlength="3" placeholder="Nombre de la calle" />
+      </label>
+      <label>
+        Número
+        <input type="text" name="street-number" inputmode="numeric" required pattern="[0-9]+" placeholder="Número" />
+      </label>
+      <label>
+        Departamento (opcional)
+        <input type="text" name="apartment" autocomplete="address-line2" placeholder="Piso y departamento" />
+      </label>
+      <label>
+        Código postal
+        <input type="text" name="postal-code" autocomplete="postal-code" required inputmode="numeric" pattern="[0-9]{4,8}" placeholder="Código postal" />
+      </label>
+      <label>
+        Método de entrega
+        <select name="shipping-method" required>
+          <option value="delivery">Envío a domicilio</option>
+          <option value="pickup" disabled>Retiro por punto (próximamente)</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Método de pago</legend>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="transfer" required />
+          <span>
+            <strong>Transferencia bancaria</strong>
+            <small>Sin costo adicional</small>
+          </span>
+        </label>
+
+        <div class="payment-extra" id="transfer-details">
+          <p class="bank-details">Datos bancarios: alias [PENDIENTE] · CBU [PENDIENTE] · titular [PENDIENTE] · CUIT [PENDIENTE]</p>
+          <label>
+            WhatsApp para coordinar
+            <input type="tel" name="whatsapp" placeholder="11 5555 5555" pattern="[0-9 +()-]{8,}" />
+          </label>
+        </div>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="mercado-pago" />
+          <span>
+            <strong>Mercado Pago</strong>
+            <small>Crédito o débito mediante la pasarela segura</small>
+          </span>
+        </label>
+
+        <div class="payment-extra" id="mercado-pago-details">
+          <p>Vas a continuar en Mercado Pago para pagar con tarjeta de crédito o débito. VOLTRA no solicita ni almacena datos de tarjeta.</p>
+          <button class="button button-secondary" id="mercado-pago-button" type="button">Pagar con Mercado Pago</button>
+          <small class="integration-note">Integración pendiente: requiere backend y credenciales de Mercado Pago.</small>
+        </div>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="card" />
+          <span>
+            <strong>Tarjeta de crédito o débito</strong>
+            <small>Procesamiento seguro mediante Mercado Pago</small>
+          </span>
+        </label>
+
+        <div class="payment-extra" id="card-details">
+          <p>El pago con tarjeta se procesará dentro de Mercado Pago. No ingreses datos de tarjeta directamente en esta página.</p>
+          <button class="button button-secondary" id="card-payment-button" type="button">Continuar con tarjeta</button>
+          <small class="integration-note">Integración pendiente: requiere backend y credenciales de Mercado Pago.</small>
+        </div>
+
+        <label class="payment-option">
+          <input type="radio" name="payment" value="cash" />
+          <span>
+            <strong>Efectivo contra entrega</strong>
+            <small>Zona CABA y alrededores</small>
+          </span>
+        </label>
+      </fieldset>
+
+      <div class="shipping-summary" id="shipping-summary">
+        <span>Subtotal</span><strong id="checkout-subtotal">$0</strong>
+        <span>Descuento mayorista</span><strong id="checkout-discount">Sin descuento configurado</strong>
+        <span>Envío</span><strong id="checkout-shipping">A calcular</strong>
+        <span>Total</span><strong id="checkout-total">$0</strong>
+      </div>
+
+      <p class="form-note">Ante cualquier consulta escribinos a <strong>voltra.ecom@gmail.com</strong>.</p>
+      <button class="button button-primary checkout-submit" type="submit">Confirmar pedido</button>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <dialog class="confirmation-modal" id="confirmation-modal" aria-labelledby="confirmation-title">
+    <div class="confirmation-content">
+      <p class="eyebrow">VOLTRA</p>
+      <h2 id="confirmation-title">¡Pedido confirmado!</h2>
+      <div id="confirmation-details"></div>
+      <div class="confirmation-actions">
+        <a class="button button-secondary" id="confirmation-whatsapp" href="#" target="_blank" rel="noreferrer">Enviar por WhatsApp</a>
+        <button class="button button-primary" id="confirmation-close" type="button">Seguir comprando</button>
+      </div>
+    </div>
+  </dialog>
+
+  <section class="reviews section" id="resenas">
+    <div class="container section-heading"><p class="eyebrow">Experiencias reales</p><h2>Reseñas de clientes</h2><p class="empty-state">Todavía no hay reseñas publicadas. Este espacio queda preparado para cargar opiniones verificadas.</p></div>
+  </section>
+
+  <section class="future-modules section">
+    <div class="container future-grid">
+      <div><p class="eyebrow">Próximamente</p><h2>Una base lista para crecer.</h2></div>
+      <div class="future-list">
+        <div><strong>Cuenta de cliente</strong><span>Registro, direcciones, historial y repetir compra requieren backend.</span></div>
+        <div><strong>Panel administrador</strong><span>Productos, precios, stock, pedidos y clientes requieren backend con roles.</span></div>
+        <div><strong>Analítica</strong><span>Eventos preparados; faltan IDs reales de Google Analytics y Meta Pixel.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" id="whatsapp-button" href="#" target="_blank" rel="noreferrer" aria-label="Contactar a VOLTRA por WhatsApp">WhatsApp</a>
+</body>
+</html>
