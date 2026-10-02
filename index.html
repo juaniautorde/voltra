@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLTRA | Barritas funcionales para cada momento</title>
+  <meta name="description" content="VOLTRA: barritas funcionales para antes de entrenar, después de fuerza, después de correr y para ese antojo. Armá tu caja x4, x8 o x12 a tu manera. Envíos a CABA y GBA." />
+  <meta name="theme-color" content="#24331F" />
+  <meta property="og:title" content="VOLTRA | De la oficina al movimiento" />
+  <meta property="og:description" content="Cuatro barritas funcionales, una para cada momento de tu rutina. Armá tu caja a tu manera." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/todasbarritas.webp" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2324331F'/%3E%3Cpath d='M18.5 4 8 18h6.5L13 28l11-14h-6.5z' fill='%23CBD352'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="brand" aria-label="VOLTRA, ir al inicio">
+        <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1 4 14h6l-1.5 9L19 10h-6z" /></svg>
+        <span>VOLTRA</span>
+      </a>
+      <div class="nav-links" id="main-menu">
+        <a href="#variedades">Variedades</a>
+        <a href="#armar">Armá tu caja</a>
+        <a href="#puntos">Puntos VOLTRA</a>
+        <a href="#envios">Envíos y pagos</a>
+        <a href="#faq">Preguntas</a>
+      </div>
+      <div class="nav-actions">
+        <button class="cart-button" type="button" data-open-cart aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.5l2.2 11h10.6L20.5 7H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /><circle cx="9.5" cy="19" r="1.5" /><circle cx="17" cy="19" r="1.5" /></svg>
+          <span>Carrito</span>
+          <b id="cart-count" hidden>0</b>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero container" id="inicio">
+      <div class="hero-copy">
+        <h1>De la oficina al movimiento.</h1>
+        <p class="lead">Cuatro barritas funcionales, una para cada momento de tu rutina: antes de entrenar, después de fuerza, después de correr y cuando aparece el antojo.</p>
+        <div class="hero-actions">
+          <a class="button button-solid" href="#armar">Armar mi caja</a>
+          <a class="button button-outline" href="#variedades">Ver las 4 variedades</a>
+        </div>
+        <ul class="hero-facts">
+          <li>Caja x4 a <span data-bind="price4">$11.000</span>, con las variedades que elijas</li>
+          <li>Packs x8 y x12 con envío bonificado</li>
+          <li>Envíos a CABA y GBA, o retiro gratis en <span data-bind="pickupArea">Avellaneda</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <img src="images/todasbarritas.webp" alt="Caja VOLTRA abierta con las cuatro variedades: Energía, Recuperación, Recuperación muscular y Gustito saludable" width="1400" height="1047" fetchpriority="high" />
+      </div>
+    </section>
+
+    <section class="section" id="variedades">
+      <div class="container">
+        <header class="section-head">
+          <h2>Una barrita para cada momento.</h2>
+          <p>Salís de estar sentada todo el día y querés moverte. Cada variedad está pensada para un momento distinto de esa transición.</p>
+        </header>
+
+        <div class="variety-grid" id="variety-grid">
+          <noscript><p>Para ver las variedades y armar tu caja necesitás tener JavaScript activado.</p></noscript>
+        </div>
+
+        <div class="compare">
+          <h3>Compará las cuatro de un vistazo</h3>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla comparativa de las cuatro variedades">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th scope="col">Variedad</th>
+                  <th scope="col">Momento</th>
+                  <th scope="col">Porción</th>
+                  <th scope="col">Energía</th>
+                  <th scope="col">Proteínas</th>
+                  <th scope="col">Carbohidratos</th>
+                  <th scope="col">Azúcares añadidos</th>
+                  <th scope="col">Fibra</th>
+                  <th scope="col">Contiene</th>
+                </tr>
+              </thead>
+              <tbody id="compare-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="builder" id="armar">
+      <div class="container">
+        <header class="section-head">
+          <h2>Armá tu caja a tu manera.</h2>
+          <p>Elegí el tamaño y combiná las variedades como quieras: surtidas, todas iguales o mitad y mitad.</p>
+        </header>
+
+        <div class="builder-layout">
+          <div class="builder-steps">
+            <fieldset>
+              <legend>1. Elegí el tamaño</legend>
+              <div class="format-options" id="format-options"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Elegí tus barritas</legend>
+              <div class="mix-rows" id="mix-rows"></div>
+              <div class="mix-shortcuts">
+                <button class="button button-ghost" id="fill-even" type="button">Surtida: 1 de cada una</button>
+                <button class="link-button" id="clear-mix" type="button" hidden>Vaciar la caja</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="box" aria-label="Tu caja">
+            <p class="box-lid">Un pack para cada momento</p>
+            <div class="box-slots" id="box-slots"></div>
+            <p class="box-status" id="builder-status" role="status" aria-live="polite"></p>
+            <div class="box-total">
+              <span id="builder-format-label">Caja x4</span>
+              <strong id="builder-price">$11.000</strong>
+            </div>
+            <button class="button button-solid" id="builder-add" type="button" disabled>Agregar al carrito</button>
+            <button class="link-button" id="builder-cancel-edit" type="button" hidden>Cancelar el cambio</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="puntos">
+      <div class="container points-layout">
+        <header class="section-head">
+          <h2>Cada compra suma puntos VOLTRA.</h2>
+          <p>No rebajamos el precio de lista en cada compra: preferimos devolverte valor cuando volvés.</p>
+          <div class="points-card">
+            <div class="points-pips" id="points-pips" aria-hidden="true"></div>
+            <p id="points-status">Todavía no sumaste puntos. Tu primera compra te da el primero.</p>
+            <small>Por ahora los puntos se guardan en este dispositivo.</small>
+          </div>
+        </header>
+
+        <ol class="points-steps">
+          <li>
+            <h3>Comprás y sumás</h3>
+            <p>Cada pedido suma 1 punto, desde la primera compra y sin importar el tamaño de la caja.</p>
+          </li>
+          <li>
+            <h3>Llegás a <span data-bind="pointsGoal">3</span> puntos</h3>
+            <p>Se desbloquea un beneficio para usar en tu próximo pack x8 o x12.</p>
+          </li>
+          <li>
+            <h3>Elegís tu beneficio</h3>
+            <p>Un descuento, un upgrade de pack, una caja gratis o acceso anticipado a las nuevas variedades.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="envios">
+      <div class="container">
+        <header class="section-head">
+          <h2>Envíos, retiro y pagos.</h2>
+        </header>
+        <div class="info-grid">
+          <article>
+            <h3>Envío a domicilio</h3>
+            <p>Entregamos en CABA y GBA con Mercado Envíos y Andreani. En la caja x4 el envío se paga aparte, desde <span data-bind="shippingFrom">$1.800</span> según la zona. En los packs x8 y x12 va bonificado.</p>
+          </article>
+          <article>
+            <h3>Retiro gratis</h3>
+            <p>Podés retirar cualquier pedido sin cargo en nuestro depósito de <span data-bind="pickupArea">Avellaneda</span>. Es la única opción en la que se puede pagar en efectivo.</p>
+          </article>
+          <article>
+            <h3>Medios de pago</h3>
+            <p>Mercado Pago con tarjeta de débito, crédito o dinero en cuenta, siempre en un pago. También transferencia bancaria. No ingresás datos de tarjeta en este sitio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="asistente">
+      <div class="container assistant-layout">
+        <header class="section-head">
+          <h2>¿Dudas con alguna barrita?</h2>
+          <p>El asistente responde con los mismos datos del envoltorio: ingredientes, alérgenos, valores nutricionales y cuándo conviene comerla.</p>
+        </header>
+
+        <div class="chat">
+          <div class="chat-tabs" id="chat-tabs" role="group" aria-label="Elegí la variedad"></div>
+          <div class="chat-window" id="chat-window" aria-live="polite"></div>
+          <div class="chat-suggestions" id="chat-suggestions">
+            <button type="button">¿Qué ingredientes tiene?</button>
+            <button type="button">¿Tiene azúcar agregada?</button>
+            <button type="button">¿Cuándo la como?</button>
+            <button type="button">¿Cuánto sale el envío?</button>
+          </div>
+          <form class="chat-form" id="chat-form">
+            <input id="chat-input" type="text" autocomplete="off" aria-label="Tu pregunta sobre la barrita elegida" />
+            <button class="button button-solid" type="submit">Preguntar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted" id="faq">
+      <div class="container faq-layout">
+        <header class="section-head">
+          <h2>Preguntas frecuentes.</h2>
+        </header>
+
+        <div class="faq-list">
+          <details name="faq" open>
+            <summary>¿Cuál me conviene?</summary>
+            <p>Depende del momento. Energía, 30 a 45 minutos antes de entrenar. Recuperación muscular, después de un entrenamiento de fuerza. Recuperación, después de correr y con 400 a 500 ml de agua. Gustito saludable, cuando aparece el antojo de algo dulce.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Puedo mezclar variedades en una misma caja?</summary>
+            <p>Sí. En la caja x4 y en los packs x8 y x12 elegís libremente qué variedades y cuántas de cada una: surtidas, todas iguales o como prefieras.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Cuánto salen?</summary>
+            <p>La caja x4 sale <span data-bind="price4">$11.000</span>. El pack x8 sale <span data-bind="price8">$20.000</span> (ahorrás <span data-bind="saving8">$2.000</span> frente a dos cajas x4) y el pack x12 sale <span data-bind="price12">$28.000</span> (ahorrás <span data-bind="saving12">$5.000</span> frente a tres cajas x4).</p>
+          </details>
+          <details name="faq">
+            <summary>¿Tienen gluten, azúcar agregada o alérgenos?</summary>
+            <p>Las cuatro contienen avena y no tienen certificación sin TACC, así que no son aptas para personas celíacas. Recuperación y Gustito saludable no tienen azúcares añadidos; Energía y Recuperación muscular llevan miel (2,5 g de azúcares añadidos por barrita). Energía contiene huevo; Recuperación muscular contiene leche, huevo, maní y almendras; Gustito saludable contiene avellanas. El detalle completo está en la ficha de cada variedad.</p>
+          </details>
+          <details name="faq">
+            <summary>¿A dónde envían y cuánto cuesta?</summary>
+            <p>Por ahora entregamos solo en CABA y GBA. En la caja x4 el envío se paga aparte, desde <span data-bind="shippingFrom">$1.800</span> según la zona. En los packs x8 y x12 el envío va bonificado.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Puedo retirar mi pedido?</summary>
+            <p>Sí, sin cargo, en nuestro depósito de <span data-bind="pickupArea">Avellaneda</span>. Cuando el pedido está listo te avisamos por mail con la dirección y el horario.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Hacen entregas rápidas?</summary>
+            <p>En zonas cercanas podemos entregar con motomensajería. Se cotiza según la distancia: escribinos a <a data-mailto href="mailto:voltra.ecom@gmail.com" data-bind="email">voltra.ecom@gmail.com</a> antes de hacer el pedido.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Cómo puedo pagar?</summary>
+            <p>Con Mercado Pago (tarjeta de débito, crédito o dinero en cuenta) o por transferencia bancaria. El efectivo está disponible solo si retirás tu pedido. Los pedidos con envío se pagan antes, por un medio digital.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Puedo pagar en cuotas?</summary>
+            <p>En esta etapa no. Las compras con tarjeta se pagan en un solo pago.</p>
+          </details>
+          <details name="faq">
+            <summary>¿Puedo comprar por Instagram, TikTok o WhatsApp?</summary>
+            <p>Los pedidos y los pagos se hacen únicamente en esta web. Por redes respondemos consultas y te mostramos cómo usamos las barritas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="legales">
+      <div class="container faq-layout">
+        <header class="section-head">
+          <h2>Una compra clara, de principio a fin.</h2>
+        </header>
+        <div class="faq-list">
+          <details name="legales">
+            <summary>Términos y condiciones</summary>
+            <p>Los precios están expresados en pesos argentinos y pueden actualizarse según los costos de los insumos. El pedido queda confirmado cuando se acredita el pago elegido. Las fotos son ilustrativas y la disponibilidad depende del stock.</p>
+          </details>
+          <details name="legales">
+            <summary>Política de privacidad</summary>
+            <p>Usamos los datos del checkout únicamente para gestionar tu pedido y responder consultas. No almacenamos datos de tarjetas en este sitio: los pagos se procesan en Mercado Pago. Para pedir acceso, rectificación o eliminación de tus datos, escribinos a <a data-mailto href="mailto:voltra.ecom@gmail.com" data-bind="email">voltra.ecom@gmail.com</a>.</p>
+          </details>
+          <details name="legales">
+            <summary>Cambios y devoluciones</summary>
+            <p>Por tratarse de alimentos, no aceptamos devoluciones de productos abiertos o manipulados. Si recibís una caja dañada, equivocada o con un problema de calidad, escribinos dentro de las 48 horas de la entrega con el número de pedido y fotos, y resolvemos el cambio o el reintegro.</p>
+          </details>
+          <details name="legales">
+            <summary>Envíos y retiro</summary>
+            <p>Entregamos en CABA y GBA mediante operadores logísticos. En la caja x4 el envío se cobra aparte según la zona; en los packs x8 y x12 está bonificado. El retiro en el depósito de <span data-bind="pickupArea">Avellaneda</span> es siempre gratuito. Los plazos se informan con el seguimiento del pedido.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand" aria-label="VOLTRA, volver al inicio">
+          <svg class="brand-bolt" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1 4 14h6l-1.5 9L19 10h-6z" /></svg>
+          <span>VOLTRA</span>
+        </a>
+        <p>Barritas funcionales para gente que pasa el día sentada y quiere moverse.</p>
+      </div>
+      <nav class="footer-links" aria-label="Enlaces del pie">
+        <a href="#variedades">Variedades</a>
+        <a href="#armar">Armá tu caja</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#legales">Términos y políticas</a>
+      </nav>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/voltra.go/" target="_blank" rel="noopener noreferrer">Instagram @voltra.go</a>
+        <a href="https://www.tiktok.com/@voltra.ar" target="_blank" rel="noopener noreferrer">TikTok @voltra.ar</a>
+        <a data-mailto href="mailto:voltra.ecom@gmail.com" data-bind="email">voltra.ecom@gmail.com</a>
+      </div>
+      <p class="footer-note">¿Tenés un gimnasio, un kiosco o un co-working y querés sumar VOLTRA? Escribinos por mail.</p>
+    </div>
+  </footer>
+
+  <!-- Ficha de producto -->
+  <dialog class="modal modal-wide" id="detail-modal" aria-labelledby="detail-title">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Cerrar ficha">×</button>
+    <div class="detail" id="detail-body"></div>
+  </dialog>
+
+  <!-- Carrito -->
+  <dialog class="modal" id="cart-modal" aria-labelledby="cart-title">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Cerrar carrito">×</button>
+    <h2 id="cart-title">Tu carrito</h2>
+
+    <div id="cart-empty">
+      <p>Todavía no agregaste ninguna caja.</p>
+      <button class="button button-solid" id="cart-empty-cta" type="button">Armar mi caja</button>
+    </div>
+
+    <div id="cart-filled" hidden>
+      <ul class="cart-items" id="cart-items"></ul>
+      <div class="cart-upsell" id="cart-upsell" hidden></div>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="cart-subtotal">$0</dd></div>
+        <div><dt>Envío</dt><dd id="cart-shipping"></dd></div>
+      </dl>
+      <button class="button button-solid button-block" id="checkout-start" type="button">Continuar con la compra</button>
+      <div class="cart-secondary">
+        <button class="link-button" id="continue-shopping" type="button">Armar otra caja</button>
+        <button class="link-button" id="clear-cart" type="button">Vaciar carrito</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Checkout -->
+  <dialog class="modal modal-checkout" id="checkout-modal" aria-labelledby="checkout-title">
+    <button class="modal-close" type="button" data-close-dialog aria-label="Cerrar checkout">×</button>
+    <h2 id="checkout-title">Completá tu pedido</h2>
+
+    <ul class="order-summary" id="checkout-summary"></ul>
+
+    <form class="checkout-form" id="checkout-form" novalidate>
+      <fieldset>
+        <legend>Tus datos</legend>
+        <div class="form-grid">
+          <label>Nombre<input type="text" name="first-name" autocomplete="given-name" required minlength="2" /></label>
+          <label>Apellido<input type="text" name="last-name" autocomplete="family-name" required minlength="2" /></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>Teléfono<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9 +\(\)\-]{8,}" placeholder="11 5555 5555" /></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Entrega</legend>
+        <label class="choice">
+          <input type="radio" name="delivery" value="delivery" checked required />
+          <span><strong>Envío a domicilio</strong><small>CABA y GBA. Bonificado en packs x8 y x12.</small></span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="delivery" value="pickup" />
+          <span><strong>Retiro en depósito</strong><small>Avellaneda. Siempre gratis.</small></span>
+        </label>
+        <p class="choice-note" id="pickup-info" hidden></p>
+
+        <fieldset class="nested" id="address-fields">
+          <legend class="visually-hidden">Dirección de entrega</legend>
+          <div class="form-grid">
+            <label class="span-2">Calle<input type="text" name="street" autocomplete="address-line1" required minlength="3" /></label>
+            <label>Número<input type="text" name="street-number" inputmode="numeric" required pattern="[0-9]+" /></label>
+            <label>Piso y departamento (opcional)<input type="text" name="apartment" autocomplete="address-line2" /></label>
+            <label>Localidad o barrio<input type="text" name="locality" autocomplete="address-level2" required /></label>
+            <label>Código postal<input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" required pattern="[A-Za-z]?[0-9]{4}[A-Za-z]{0,3}" placeholder="1870" /></label>
+          </div>
+          <p class="field-hint" id="postal-hint" role="status"></p>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pago</legend>
+        <label class="choice">
+          <input type="radio" name="payment" value="mercado-pago" required />
+          <span><strong>Mercado Pago</strong><small>Débito, crédito o dinero en cuenta. Un pago, sin cuotas.</small></span>
+        </label>
+        <p class="choice-note" id="mercado-pago-details" hidden>Vas a continuar en Mercado Pago para completar el pago. VOLTRA no solicita ni almacena datos de tarjeta.</p>
+
+        <label class="choice">
+          <input type="radio" name="payment" value="transfer" />
+          <span><strong>Transferencia bancaria</strong><small>Sin costo adicional.</small></span>
+        </label>
+        <p class="choice-note" id="transfer-details" hidden></p>
+
+        <label class="choice" id="cash-option">
+          <input type="radio" name="payment" value="cash" />
+          <span><strong>Efectivo</strong><small id="cash-hint">Disponible solo si retirás tu pedido</small></span>
+        </label>
+      </fieldset>
+
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="checkout-subtotal">$0</dd></div>
+        <div><dt>Envío</dt><dd id="checkout-shipping"></dd></div>
+        <div class="totals-total"><dt>Total</dt><dd id="checkout-total">$0</dd></div>
+      </dl>
+
+      <button class="button button-solid button-block" id="checkout-submit" type="submit">Confirmar pedido</button>
+      <p class="form-message" id="form-message" role="alert"></p>
+    </form>
+  </dialog>
+
+  <!-- Confirmación -->
+  <dialog class="modal" id="confirmation-modal" aria-labelledby="confirmation-title">
+    <h2 id="confirmation-title">¡Gracias por tu compra!</h2>
+    <div id="confirmation-details"></div>
+    <button class="button button-solid button-block" id="confirmation-close" type="button">Volver a la tienda</button>
+  </dialog>
+
+  <a class="whatsapp-button" id="whatsapp-button" href="#" target="_blank" rel="noopener noreferrer" hidden>Consultas por WhatsApp</a>
+</body>
+</html>
